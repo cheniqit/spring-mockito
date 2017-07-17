@@ -26,11 +26,18 @@ public class MyBean {
     private FinalClass finalClass;
 
     public String sayHello(){
-        return finalClass.sayHello();
+        if(isExist()) {
+            return finalClass.sayHello();
+        }
+        return null;
     }
 
     public Message generateMessage() {
         final long id = IdGenerator.generateNewId();
         return new Message(id, "My bean message");
+    }
+
+    private boolean isExist() {
+        return false;
     }
 }
