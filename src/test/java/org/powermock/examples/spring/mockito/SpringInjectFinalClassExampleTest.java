@@ -32,11 +32,9 @@ public class SpringInjectFinalClassExampleTest extends TestBase{
     @Test
     public void testInjectFinalClass() throws Exception {
         final String value = "What's up?";
-        MyBean myBean = PowerMockito.spy(new MyBean());//创建spy
         when(finalClass.sayHello()).thenReturn(value);
-        PowerMockito.when(myBean,"isExist").thenReturn(Boolean.TRUE);
 
-        assertEquals(value, myBean.sayHello());
+        assertEquals(value, myBean.sayHello1());
 
     }
 

@@ -32,6 +32,10 @@ public class MyBean {
         return null;
     }
 
+    public String sayHello1(){
+        return finalClass.sayHello();
+    }
+
     public Message generateMessage() {
         final long id = IdGenerator.generateNewId();
         return new Message(id, "My bean message");
